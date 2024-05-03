@@ -6,13 +6,17 @@ public class MainResta {
 
         System.out.println("Ingresa el primer número: ");
         int a = scanner.nextInt();
+        resta.setA(a);
 
         System.out.println("Ingresa el segundo número: ");
         int b = scanner.nextInt();
-        
+        resta.setB(b);
 
-        int r = resta.restar(a,b);
-        System.out.println("El resultado de la resta es " + r);
+        resta.restar();
+
+        int resultado = resta.getR();
+        System.out.println("El resultado de la resta es " + resultado);
+        System.out.println(resta.toString());
 
         scanner.close();
     }
